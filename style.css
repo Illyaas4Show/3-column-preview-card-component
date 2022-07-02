@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
 :root {
     --bright-orange: hsl(31, 77%, 52%);
     --dark-cyan: hsl(184, 100%, 22%);
@@ -10,10 +13,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
     background-color: var(--very-light-gray);
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,20 +30,50 @@ body {
 
 h1 {
     opacity: 0;
+    position: absolute;
 }
 
 /* container styling -------------------------------*/
 .container {
-    max-width: 90%;
     display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
     overflow: hidden;
 }
 
+/* Generals ----------------------------------------*/
 section {
     display: flex;
     flex-direction: column;
-    min-width: 10rem;
-    flex-wrap: wrap;
+    max-width: 20rem;
+    padding: 2.5rem;
+    align-items: start;
+}
+
+h2 {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    margin-top: 2rem;
+    font-size: 2.4rem;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 3rem;
+    font-size: 15px;
+    border: 3px white solid;
+    background-color: white;
 }
 
 /* sedans styling ----------------------------------*/
@@ -44,24 +81,12 @@ section {
     background-color: var(--bright-orange);
 }
 
-.sedans h2::before {
-    content: url('images/icon-sedans.svg');
-}
-
 /* suvs styling ------------------------------------*/
 .suvs {
     background-color: var(--dark-cyan);
 }
 
-.suvs h2::before {
-    content: url('images/icon-suvs.svg');
-}
-
 /* luxury styling ----------------------------------*/
 .luxury {
     background-color: var(--very-dark-cyan);
-}
-
-.luxury h2::before {
-    content: url('images/icon-luxury.svg');
 }
