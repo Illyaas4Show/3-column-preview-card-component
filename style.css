@@ -66,6 +66,7 @@ p {
     font-family: 'Lexend Deca', sans-serif;
     line-height: 1.5rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 button {
@@ -110,12 +111,16 @@ button:hover {
 
 .luxury button {
     color: var(--very-dark-cyan);
+    margin-top: auto;
 }
 
+.luxury p {
+    margin-bottom: 3rem;
+}
 /* Media query ------------------------------------*/
 
 
-@media (max-width: 1000px) and (min-width: 638px) {
+@media (max-width: 960px) and (min-width: 638px) {
     .container {
         margin-top: 6rem;
     }
@@ -130,6 +135,11 @@ button:hover {
 
     .luxury {
         border-radius: 0 0 .6rem .6rem;
+        padding: 3rem;
+    }
+
+    .luxury p {
+        margin-bottom: 5rem;
     }
 }
 
@@ -144,5 +154,10 @@ button:hover {
 
     .luxury {
         border-radius: 0 0 .6rem .6rem;
+        padding: 3rem;
+    }
+
+    p {
+        margin-bottom: 0;
     }
 }
