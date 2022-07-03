@@ -40,6 +40,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
+    border-radius: .6rem;
 }
 
 /* Generals ----------------------------------------*/
@@ -68,12 +69,20 @@ p {
 }
 
 button {
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding: 1rem 2rem 1rem 2rem;
     border-radius: 3rem;
     font-size: 15px;
     border: 3px white solid;
     background-color: white;
+    margin-bottom: 1rem;
+    transition: all 250ms ease;
+    justify-self: end;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: white!important;
 }
 
 /* sedans styling ----------------------------------*/
@@ -81,12 +90,59 @@ button {
     background-color: var(--bright-orange);
 }
 
+.sedans button {
+    color: var(--bright-orange);
+}
+
 /* suvs styling ------------------------------------*/
 .suvs {
     background-color: var(--dark-cyan);
 }
 
+.suvs button {
+    color: var(--dark-cyan);
+}
+
 /* luxury styling ----------------------------------*/
 .luxury {
     background-color: var(--very-dark-cyan);
+}
+
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+
+/* Media query ------------------------------------*/
+
+
+@media (max-width: 1000px) and (min-width: 638px) {
+    .container {
+        margin-top: 6rem;
+    }
+
+    .sedans {
+        border-radius: .6rem 0 0 .6rem;
+    }
+
+    .suvs {
+        border-radius: 0 .6rem .6rem 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 .6rem .6rem;
+    }
+}
+
+@media (max-width: 638px) {
+    .container {
+        margin-top: 6rem;
+    }
+
+    .sedans {
+        border-radius: .6rem .6rem 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 .6rem .6rem;
+    }
 }
